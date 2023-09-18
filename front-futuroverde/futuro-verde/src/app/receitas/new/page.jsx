@@ -3,8 +3,6 @@
 import { create } from "@/actions/receitas";
 import Button from "@/components/Button";
 import InputText from "@/components/InputText";
-import NavBar from "@/components/NavBar";
-import { CheckIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { redirect } from 'next/navigation'
 
