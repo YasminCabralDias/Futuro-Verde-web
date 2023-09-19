@@ -1,3 +1,5 @@
+
+
 "use client"
 
 import { create } from "@/actions/receitas";
@@ -21,7 +23,6 @@ export default function FormContas() {
 
     return (
         <>
-            <NavBar active="contas" />
 
             <main className="bg-slate-900 p-12  max-w-lg m-auto">
                 <h2 className="text-2xl">Cadastrar receita</h2>
@@ -30,7 +31,7 @@ export default function FormContas() {
                     <InputText name="descricao" id="descricao" label="Descrição" />
 
                     <div className="flex justify-around">
-                        <Button element="button" icon={<CheckIcon className="h-6 w-6" />}>
+                        <Button element="button">
                             salvar
                         </Button>
                     </div>
