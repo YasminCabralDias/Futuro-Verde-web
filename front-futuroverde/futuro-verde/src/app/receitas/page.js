@@ -1,7 +1,7 @@
 
 import DataRow from "./DataRow";
 import Button from "@/components/Button";
-import { getReceita } from "@/actions/receitas";
+import { getReceitas } from "@/actions/receitas";
 
 
 export default async function Home() {
