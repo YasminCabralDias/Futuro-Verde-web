@@ -17,7 +17,7 @@ export default function Header() {
                 </li>
 
                 <li>
-                    <Link className="text-green-500" href="/receitas/new/DataRow.jsx">
+                    <Link className="text-green-500" href="/receitas">
                     Receitas
                     </Link>
                 </li>
