@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 import { getReceitas } from "@/actions/receitas";
 
 
-export default async function Receitas() {
+export default async function Home() {
   const data = await getReceitas()
 
 return (
