@@ -59,7 +59,7 @@ export async function update(receita){
     revalidatePath("/")
 }
 
-export async function getReceita(id){
+export async function getReceitas(id){
     const getUrl = url + "/" + id
     const resp = await fetch(getUrl)
     if (resp.status !== 200) return {error: "Erro ao buscar dados da receita. " + resp.status}
