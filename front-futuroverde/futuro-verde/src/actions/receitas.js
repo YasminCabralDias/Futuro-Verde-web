@@ -25,6 +25,12 @@ export async function create(formData) {
     return {ok: "success"}
 } 
 
+export async function getReceitas(){
+    const resp = await fetch(url, { next: { revalidate: 3600 } })
+    if (!resp.ok) throw new Error("Não pode carregar os dados")
+    return resp.json()
+  }
+
 
 export async function destroy(id){  
     const deleteUrl = url + "/" + id
