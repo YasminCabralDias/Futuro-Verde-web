@@ -41,9 +41,9 @@ export async function destroy(id){
 
     const resp = await fetch(deleteUrl, options)
 
-    if (resp.status !== 204) return {error: "Erro ao apagar conta. " + resp.status}
+    if (resp.status !== 204) return {error: "Erro ao apagar receita. " + resp.status}
 
-    revalidatePath("/contas")
+    revalidatePath("/receitas")
 
 }
 
