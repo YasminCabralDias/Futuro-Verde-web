@@ -21,7 +21,7 @@ return (
       </div>
 
         <div id="data">
-          {(receita => <DataRow receita={receita} /> )}
+          {data.map(receita => <DataRow receita={receita} /> )}
         </div>
       </main>
     </>
