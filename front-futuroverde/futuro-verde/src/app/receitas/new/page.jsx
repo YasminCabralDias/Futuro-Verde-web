@@ -9,7 +9,7 @@ import { useState } from "react";
 import { redirect } from 'next/navigation'
 
 
-export default function FormContas() {
+export default function FormReceitas() {
     const [message, setMessage] = useState("")
 
     async function handleSubmit(formData){
@@ -18,7 +18,7 @@ export default function FormContas() {
             setMessage(resp.message)
             return
         }
-        redirect("/contas")
+        redirect("/receitas")
     }
 
     return (
