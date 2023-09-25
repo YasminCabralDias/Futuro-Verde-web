@@ -1,7 +1,8 @@
 
+import DropMenu from "@/components/DropMenu";
 import Header from "@/components/header"
 
-export default function Receitas() {
+export default function Receitas({receita}) {
   
     const {nome} = Receitas
     
@@ -19,6 +20,9 @@ export default function Receitas() {
           <div id="data-row" className="group/row flex items-center justify-between">
               <div className="flex gap-1">
                   <span>{nome}</span>
+                  <span>
+                  <DropMenu receita={receita}/> 
+                  </span>
               </div>
           </div>           
         </div>
