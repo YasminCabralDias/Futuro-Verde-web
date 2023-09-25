@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache"
 
-const url = "https://futuro-verde-web.vercel.app/receitas"
+const url = process.env.NEXT_PUBLIC_BASE_URL + "/receitas"
 
 export async function create(formData) {
     
