@@ -43,7 +43,7 @@ export async function destroy(id){
 
     if (resp.status !== 204) return {error: "Erro ao apagar receita. " + resp.status}
 
-    revalidatePath("/reas")
+    revalidatePath("/receitas")
 
 }
 
