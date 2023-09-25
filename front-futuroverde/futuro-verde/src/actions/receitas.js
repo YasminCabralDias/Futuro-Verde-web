@@ -2,7 +2,7 @@
 
 import { revalidatePath } from "next/cache"
 
-const url = process.env.NEXT_PUBLIC_BASE_URL + "/receitas"
+const url = "https://futuro-verde-web.vercel.app/receitas"
 
 export async function create(formData) {
     
@@ -43,7 +43,7 @@ export async function destroy(id){
 
     if (resp.status !== 204) return {error: "Erro ao apagar receita. " + resp.status}
 
-    revalidatePath("/receitas")
+    revalidatePath("/reas")
 
 }
 
