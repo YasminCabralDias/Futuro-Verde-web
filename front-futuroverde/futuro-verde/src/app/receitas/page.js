@@ -2,7 +2,7 @@ import NavBar from "@/components/NavBar";
 import DataRow from "./DataRow";
 import Button from "@/components/Button";
 import { getReceitas } from "@/actions/receitas";
-import NavBar from "@/components/NavBar";
+
 
 export default async function Home() {
   const data = await getReceitas()
