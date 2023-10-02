@@ -20,7 +20,7 @@ export default async function Home() {
         </div>
 
         <div id="data" className="text-slate-300 m-1">
-          {data.map(conta => <DataRow receita={receita} /> )}
+          {data.map(receita => <DataRow receita={receita} /> )}
         </div>
       </main>
     </>
