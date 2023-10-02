@@ -3,7 +3,6 @@
 import Button from "@/components/Button";
 import InputText from "@/components/InputText";
 import Image from "next/image";
-import loginimage from "@/images/login.jpg"
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AuthContext } from "@/contexts/AuthContext";
