@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 import InputText from "@/components/InputText";
 import { useState } from "react";
 import { redirect } from 'next/navigation'
-import { update } from "@/actions/contas";
+import { update } from "@/actions/receitas";
 
 export default function FormEdit({receita}){
     const [message, setMessage] = useState("")
