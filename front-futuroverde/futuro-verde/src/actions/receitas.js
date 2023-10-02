@@ -6,7 +6,7 @@ import { cookies } from 'next/headers'
 const url = process.env.NEXT_PUBLIC_BASE_URL + "/receitas"
 
 export async function create(formData) {
-    
+
     const token = cookies().get("futuroverde_token")
 
     const options = {
@@ -29,7 +29,6 @@ export async function create(formData) {
 } 
 
 export async function getReceitas(){
-    
     const token = cookies().get("futuroverde_token")
     const options = {
         method: "GET",
@@ -42,26 +41,17 @@ export async function getReceitas(){
     if (!resp.ok) throw new Error("Não pode carregar os dados")
     return resp.json()
   }
-
-
-export async function destroy(id){  
+  export async function destroy(id){  
     const deleteUrl = url + "/" + id
-
     const options = {
         method: "DELETE"
     }
-
     const resp = await fetch(deleteUrl, options)
-
     if (resp.status !== 204) return {error: "Erro ao apagar receita. " + resp.status}
-
     revalidatePath("/receitas")
-
 }
-
 export async function update(receita){
     const updateURL = url + "/" + receita.id
-
     const options = {
         method: "PUT",
         body: JSON.stringify(receita),
@@ -69,14 +59,10 @@ export async function update(receita){
             "Content-Type": "application/json"
         }
     }
-
     const resp = await fetch(updateURL, options)
-
     if (resp.status !== 200) return {error: "Erro ao atualizar a receita. " + resp.status}
-
     revalidatePath("/")
 }
-
 export async function getReceita(id){
     const getUrl = url + "/" + id
     const resp = await fetch(getUrl)
