@@ -7,7 +7,7 @@ import Button from "@/components/Button";
 import InputText from "@/components/InputText";
 import { useState } from "react";
 import { redirect } from 'next/navigation'
-
+import NavBar from "@/components/NavBar";
 
 export default function FormReceitas() {
     const [message, setMessage] = useState("")

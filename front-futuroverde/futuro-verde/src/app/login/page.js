@@ -9,6 +9,7 @@ import { AuthContext } from "@/contexts/AuthContext";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
+
 export default function LoginPage(){
     const { register, handleSubmit } = useForm()
     const { login } = useContext(AuthContext)
