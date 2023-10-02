@@ -24,6 +24,8 @@ export default function FormReceitas() {
     return (
         <>
 
+            <NavBar active="receitas" />
+
             <main className="bg-slate-900 p-12  max-w-lg m-auto">
                 <h2 className="text-2xl">Cadastrar receita</h2>
                 <form action={handleSubmit}>
