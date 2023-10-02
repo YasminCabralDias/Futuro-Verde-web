@@ -1,17 +1,20 @@
 "use server"
 
 import { revalidatePath } from "next/cache"
+import { cookies } from 'next/headers'
 
 const url = process.env.NEXT_PUBLIC_BASE_URL + "/receitas"
 
 export async function create(formData) {
     
+    const token = cookies().get("futuroverde_token")
 
     const options = {
         method: "POST",
         body: JSON.stringify(Object.fromEntries(formData)),
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token.value}`
         }
     }
 
@@ -26,7 +29,16 @@ export async function create(formData) {
 } 
 
 export async function getReceitas(){
-    const resp = await fetch(url, { next: { revalidate: 3600 } })
+    
+    const token = cookies().get("futuroverde_token")
+    const options = {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${token.value}`
+        }
+    }
+    const resp = await fetch(url, options)
+
     if (!resp.ok) throw new Error("Não pode carregar os dados")
     return resp.json()
   }
