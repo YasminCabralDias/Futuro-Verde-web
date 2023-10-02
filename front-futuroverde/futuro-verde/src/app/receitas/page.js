@@ -1,4 +1,4 @@
-
+import NavBar from "@/components/NavBar";
 import DataRow from "./DataRow";
 import Button from "@/components/Button";
 import { getReceitas } from "@/actions/receitas";
@@ -9,7 +9,7 @@ export default async function Home() {
 
 return (
     <>
-      <div active={"receitas"} />
+      <NavBar active={"receitas"} />
 
       <main className="bg-green-500 m-20 p-12 rounded-xl">
 
